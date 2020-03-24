@@ -38,7 +38,7 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/walterwootz/wdv-pet-clinic.git</developerConnection>
-      <tag>wdv-pet-clinic-0.0.1</tag>
+        <tag>wdv-pet-clinic-0.0.1</tag>
   </scm>
 
 </project>
