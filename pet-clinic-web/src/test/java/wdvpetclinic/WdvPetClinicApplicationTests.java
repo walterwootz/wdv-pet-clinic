@@ -1,4 +1,4 @@
-package wdv.examples.wdvpetclinic;
+package wdvpetclinic;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
