@@ -3,7 +3,7 @@
     <parent>
         <artifactId>wdv-pet-clinic</artifactId>
         <groupId>wdv.examples</groupId>
-        <version>0.0.2</version>
+        <version>0.0.3-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -13,7 +13,7 @@
         <dependency>
             <groupId>wdv.examples</groupId>
             <artifactId>pet-clinic-data</artifactId>
-            <version>0.0.2</version>
+            <version>0.0.3-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
