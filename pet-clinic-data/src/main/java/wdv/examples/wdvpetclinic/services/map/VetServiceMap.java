@@ -1,10 +1,12 @@
 package wdv.examples.wdvpetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import wdv.examples.wdvpetclinic.models.Vet;
 import wdv.examples.wdvpetclinic.services.VetService;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override

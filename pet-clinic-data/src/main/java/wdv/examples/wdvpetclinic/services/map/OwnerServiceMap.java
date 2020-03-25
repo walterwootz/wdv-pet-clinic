@@ -1,10 +1,12 @@
 package wdv.examples.wdvpetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import wdv.examples.wdvpetclinic.models.Owner;
 import wdv.examples.wdvpetclinic.services.OwnerService;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override

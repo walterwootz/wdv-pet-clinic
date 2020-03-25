@@ -6,8 +6,6 @@ import wdv.examples.wdvpetclinic.models.Owner;
 import wdv.examples.wdvpetclinic.models.Vet;
 import wdv.examples.wdvpetclinic.services.OwnerService;
 import wdv.examples.wdvpetclinic.services.VetService;
-import wdv.examples.wdvpetclinic.services.map.OwnerServiceMap;
-import wdv.examples.wdvpetclinic.services.map.VetServiceMap;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -15,9 +13,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = (OwnerServiceMap) new OwnerServiceMap();
-        vetService   = (VetServiceMap) new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
