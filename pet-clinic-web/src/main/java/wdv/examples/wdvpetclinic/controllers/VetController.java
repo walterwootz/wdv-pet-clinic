@@ -1,14 +1,22 @@
 package wdv.examples.wdvpetclinic.controllers;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import wdv.examples.wdvpetclinic.services.VetService;
 
 @Controller
 public class VetController {
 
-    @RequestMapping({"/vets", "vets/index", "vets/index.html", "vets.html"})
-    public String showVets(){
+    private final VetService vetService;
 
+    public VetController(VetService vetService) {
+        this.vetService = vetService;
+    }
+
+    @RequestMapping({"/vets", "vets/index", "vets/index.html", "vets.html"})
+    public String showVetsAll(Model model){
+        model.addAttribute("vets", vetService.findAll());
         return "vets/index";
     }
 }
