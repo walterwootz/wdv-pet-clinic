@@ -1,4 +1,4 @@
-package wdv.examples.wdvpetclinic.model;
+package wdv.examples.wdvpetclinic.models;
 
 public class PetType extends BaseEntity {
 
