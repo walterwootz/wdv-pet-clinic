@@ -1,11 +1,11 @@
 package wdv.examples.wdvpetclinic.services.map;
 
 import wdv.examples.wdvpetclinic.models.Owner;
-import wdv.examples.wdvpetclinic.services.CrudService;
+import wdv.examples.wdvpetclinic.services.OwnerService;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
     public Set<Owner> findAll() {
@@ -30,5 +30,10 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
+    }
+
+    @Override
+    public Set<Owner> findByLastName(String lastName) {
+        return null;
     }
 }

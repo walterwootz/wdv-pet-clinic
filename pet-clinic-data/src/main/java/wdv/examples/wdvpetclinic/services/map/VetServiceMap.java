@@ -1,11 +1,11 @@
 package wdv.examples.wdvpetclinic.services.map;
 
 import wdv.examples.wdvpetclinic.models.Vet;
-import wdv.examples.wdvpetclinic.services.CrudService;
+import wdv.examples.wdvpetclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
     @Override
     public Set<Vet> findAll() {
