@@ -4,4 +4,5 @@ import org.springframework.data.repository.CrudRepository;
 import wdv.examples.wdvpetclinic.models.Owner;
 
 public interface OwnerRepository extends CrudRepository<Owner, Long> {
+    Iterable<Owner> findByLastName(String lastName);
 }
