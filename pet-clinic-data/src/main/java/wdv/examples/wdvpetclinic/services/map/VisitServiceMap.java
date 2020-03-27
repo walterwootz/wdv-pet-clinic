@@ -1,10 +1,12 @@
 package wdv.examples.wdvpetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import wdv.examples.wdvpetclinic.models.Visit;
 import wdv.examples.wdvpetclinic.services.VisitService;
 
 import java.util.Set;
 
+@Service
 public class VisitServiceMap extends AbstractMapService<Visit, Long> implements VisitService {
 
     @Override
