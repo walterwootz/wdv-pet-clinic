@@ -1,5 +1,6 @@
 package wdv.examples.wdvpetclinic.services.map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import wdv.examples.wdvpetclinic.models.Owner;
 import wdv.examples.wdvpetclinic.models.Pet;
@@ -10,6 +11,7 @@ import wdv.examples.wdvpetclinic.services.PetTypeService;
 import java.util.Set;
 
 @Service
+@Profile({"default","map"})
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;
