@@ -9,6 +9,7 @@ import wdv.examples.wdvpetclinic.services.PetService;
 import wdv.examples.wdvpetclinic.services.PetTypeService;
 
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 @Profile({"default","map"})
@@ -71,6 +72,9 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 
     @Override
     public Set<Owner> findByLastName(String lastName) {
-        return null;
+        return this.findAll()
+                .stream()
+                .filter(owner -> owner.getLastName().equalsIgnoreCase(lastName))
+                .collect(Collectors.toSet());
     }
 }
